@@ -13,6 +13,7 @@ public class constant {
         public static  final String UN_CONFIRMED = "unconfirmed";
         public static  final String PREPARING = "preparing";
         public static  final String DONE = "done";
+        public static  final String CANCEL = "cancel";
     }
 
     public static final class RESULT_CODE {
@@ -41,6 +42,7 @@ public class constant {
         public static final String NOT_FOUND_HANDLE = "Not found api";
         public static final String NOT_ALLOWED = "Method not allowed";
         public static final String ACCOUNT_DEACTIVE = "Account is deactive";
+        public static final String ROLE_ERROR = "Role name is not exist";
     }
 
     public static final class ROLE {

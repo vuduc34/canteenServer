@@ -16,9 +16,7 @@ import project.canteen.repository.canteen.cartItemRepository;
 import project.canteen.repository.canteen.cartRepository;
 import project.canteen.repository.canteen.foodRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class cartItemService {
@@ -44,6 +42,7 @@ public class cartItemService {
 
                 if(cart == null) {
                     cart newCart = new cart();
+                    newCart.setTotalPrice(0L);
                     newCart.setAccount(account);
                     cartRepository.save(newCart);
                     cart = cartRepository.findCartByAccountId(addCartItemModel.getAccountId());
@@ -53,6 +52,22 @@ public class cartItemService {
                     responMessage.setResultCode(constant.RESULT_CODE.ERROR);
                     responMessage.setMessage(constant.MESSAGE.ERROR);
                     responMessage.setData("Not found account id = "+addCartItemModel.getFoodId());
+                } else if(cart.getCartItems().stream().anyMatch(item -> item.getFoodItem().getId() == addCartItemModel.getFoodId())){
+                    cartItem cartItemFound = null;
+                    for (cartItem item : cart.getCartItems()) {
+                        if (item.getFoodItem().getId()==addCartItemModel.getFoodId()) {
+                            cartItemFound = item;
+                            break; // Dừng vòng lặp ngay khi tìm thấy
+                        }
+                    }
+                    cartItemFound.setQuantity(cartItemFound.getQuantity()+addCartItemModel.getQuantity());
+                    cartItemFound.setPrice(cartItemFound.getPrice()+foodItem.getPrice()*addCartItemModel.getQuantity());
+                    cart.setTotalPrice(cart.getTotalPrice()+foodItem.getPrice()*addCartItemModel.getQuantity());
+                    cartRepository.save(cart);
+                    cartItemRepository.save(cartItemFound);
+                    responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+                    responMessage.setMessage(constant.MESSAGE.SUCCESS);
+                    responMessage.setData("Successfully");
                 } else {
                     cartItem cartItem = new cartItem();
                     cartItem.setCart(cart);
@@ -137,11 +152,14 @@ public class cartItemService {
                 responMessage.setData("Not found cart id = "+cartId);
             } else {
                 //update total price
-                Set<cartItem> cartItems = cart.getCartItems();
+//                Set<cartItem> cartItems = cart.getCartItems();
+                List<cartItem> cartItems = new ArrayList<>(cart.getCartItems());
+                Collections.sort(cartItems, Comparator.comparing(cartItem::getId));
                 List<cartItemInfo> infoList = new ArrayList<>();
                 cartItems.forEach(cartItem -> {
                     cartItemInfo info = new cartItemInfo();
                     foodItem foodItem = cartItem.getFoodItem();
+                    info.setId(cartItem.getId());
                     info.setPrice(cartItem.getPrice());
                     info.setQuantity(cartItem.getQuantity());
                     info.setDescription(foodItem.getDescription());

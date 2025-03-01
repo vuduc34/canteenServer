@@ -148,41 +148,52 @@ public class accountService {
         }
     }
 
-    public ResponMessage createAccount(signUpData signUp) throws Exception {
+    public ResponMessage createAccount(signUpData signUp, String roleName) throws Exception {
         ResponMessage responMessage = new ResponMessage();
-        if (accountRepository.existsByUsername(signUp.getUserName())) {
-            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
-            responMessage.setMessage(constant.MESSAGE.USERNAME_EXIST);
-            return responMessage;
+        try{
+            role role = roleRepository.findByName(roleName);
+            if (accountRepository.existsByUsername(signUp.getUserName())) {
+                responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+                responMessage.setMessage(constant.MESSAGE.USERNAME_EXIST);
+                return responMessage;
 
-        } else if (accountRepository.existsByEmail(signUp.getEmail())) {
-            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
-            responMessage.setMessage(constant.MESSAGE.EMAIL_EXIST);
-            return responMessage;
-        } else {
-            account account = new account();
-            account.setStatus(constant.STATUS.DE_ACTIVE);
-            account.setUsername(signUp.getUserName());
-            account.setPassword(passwordEncoder.encode(signUp.getPassWord()));
-            account.setPhoneNumber(signUp.getPhoneNumber());
-            account.setFullname(signUp.getFullname());
-            Set<role> roles = new HashSet<>();
-            role role = roleRepository.findByName(constant.ROLE.USER);
-            roles.add(role);
-            account.setRoles(roles);
-            account.setEmail(signUp.getEmail());
-            String token =generateToken();
-            while (accountRepository.existsByCode(token)) {
-                token = generateToken();
+            } else if (accountRepository.existsByEmail(signUp.getEmail())) {
+                responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+                responMessage.setMessage(constant.MESSAGE.EMAIL_EXIST);
+                return responMessage;
+            } else if(role == null) {
+                responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+                responMessage.setMessage(constant.MESSAGE.ROLE_ERROR);
+                return responMessage;
+            } else {
+                account account = new account();
+                account.setStatus(constant.STATUS.DE_ACTIVE);
+                account.setUsername(signUp.getUserName());
+                account.setPassword(passwordEncoder.encode(signUp.getPassWord()));
+                account.setPhoneNumber(signUp.getPhoneNumber());
+                account.setFullname(signUp.getFullname());
+                Set<role> roles = new HashSet<>();
+                roles.add(role);
+                account.setRoles(roles);
+                account.setEmail(signUp.getEmail());
+                String token =generateToken();
+                while (accountRepository.existsByCode(token)) {
+                    token = generateToken();
+                }
+                account.setCode(token);
+                accountRepository.save(account);
+                sendMailActiveAccount(token, signUp.getEmail());
+                responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+                responMessage.setMessage(constant.MESSAGE.SUCCESS);
+                responMessage.setData(account);
+                return responMessage;
             }
-            account.setCode(token);
-            accountRepository.save(account);
-            sendMailActiveAccount(token, signUp.getEmail());
-            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
-            responMessage.setMessage(constant.MESSAGE.SUCCESS);
-            responMessage.setData(account);
-            return responMessage;
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(e.getMessage());
+            return  responMessage;
         }
+
     }
 
     public ResponMessage activeAccount(@RequestParam String code) {
@@ -204,11 +215,14 @@ public class accountService {
         ResponMessage responMessage = new ResponMessage();
         try {
             account account = accountRepository.findUserByUsername(username);
+            role roles = roleRepository.findByName(role);
             if(account == null) {
                 responMessage.setResultCode(constant.RESULT_CODE.ERROR);
                 responMessage.setMessage(constant.MESSAGE.NOT_FOUND_USER);
-            } else {
-                role roles = roleRepository.findByName(role);
+            } else if(roles == null){
+                responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+                responMessage.setMessage(constant.MESSAGE.ROLE_ERROR);
+            }  else{
                 Set<role> set = new HashSet<>();
                 set.add(roles);
                 account.setRoles(set);
@@ -301,6 +315,19 @@ public class accountService {
                 roles.add(e);
             });
             responMessage.setData(roles);
+            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+            responMessage.setMessage(constant.MESSAGE.SUCCESS);
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(e.getMessage());
+        }
+        return responMessage;
+    }
+    public ResponMessage deleteAccount(String username) {
+        ResponMessage responMessage = new ResponMessage();
+        try {
+            account account = accountRepository.findUserByUsername(username);
+            accountRepository.delete(account);
             responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
             responMessage.setMessage(constant.MESSAGE.SUCCESS);
         } catch (Exception e) {

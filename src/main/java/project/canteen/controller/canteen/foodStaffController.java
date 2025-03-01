@@ -21,7 +21,7 @@ public class foodStaffController {
         return foodService.create(foodItem,category_id);
     }
 
-    @PostMapping(value = "/food/update")
+    @PutMapping(value = "/food/update")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage updateFood(@RequestBody foodItem foodItem) {

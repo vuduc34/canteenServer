@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class cartItemInfo {
+    private Long id;
     private int quantity;
     private Long price;
     private Long foodId;

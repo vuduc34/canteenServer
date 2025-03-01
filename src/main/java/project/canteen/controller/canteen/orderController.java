@@ -20,4 +20,43 @@ public class orderController {
     public ResponMessage createOrder(@RequestBody createOrderModel createOrderModel) {
         return orderService.createOrder(createOrderModel);
     }
+    @PutMapping(value = "/order/cancel")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage cancelOrder(@RequestParam Long orderId) {
+        return orderService.cancelOrder(orderId);
+    }
+    @PutMapping(value = "/order/preparing")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage preparingOrder(@RequestParam Long orderId) {
+        return orderService.preparingOrder(orderId);
+    }
+
+    @PutMapping(value = "/order/done")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage doneOrder(@RequestParam Long orderId) {
+        return orderService.doneOrder(orderId);
+    }
+
+    @GetMapping(value = "/order/findOrderByAccountId")
+    @ResponseBody
+    public ResponMessage findOrderByAccountId(@RequestParam Long accountId) {
+        return orderService.getOrderByAccountId(accountId);
+    }
+
+    @GetMapping(value = "/order/getAllOrder")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getAllOrder() {
+        return orderService.getAllOrder();
+    }
+
+    @GetMapping(value = "/order/getOrderPreparingOrUnconfirmed")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getOrderPreparingOrUnconfirmed() {
+        return orderService.getOrderPreparingOrUnconfirmed();
+    }
 }

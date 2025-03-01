@@ -1,7 +1,6 @@
 package project.canteen.controller.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import project.canteen.common.constant;
 import project.canteen.model.auth.*;
@@ -24,7 +23,7 @@ public class authController {
     @PostMapping("/signup")
     @ResponseBody
     public ResponMessage signup(@RequestBody signUpData dto) throws Exception {
-        return  accountService.createAccount(dto);
+        return  accountService.createAccount(dto,constant.ROLE.USER);
 
     }
     @GetMapping("/authFail")

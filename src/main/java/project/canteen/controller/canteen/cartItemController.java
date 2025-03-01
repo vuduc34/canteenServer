@@ -19,7 +19,7 @@ public class cartItemController {
     public ResponMessage addFoodToCartItem(@RequestBody addCartItemModel addCartItemModel) {
         return cartItemService.addFoodToCart(addCartItemModel);
     }
-    @PostMapping(value = "/cartItem/update")
+    @PutMapping(value = "/cartItem/update")
     @ResponseBody
     public ResponMessage updateCartItem(@RequestBody updateCartItemModel updateCartItemModel) {
         return cartItemService.updateCartItem(updateCartItemModel);

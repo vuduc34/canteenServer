@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import project.canteen.entity.auth.account;
+import project.canteen.model.canteen.orderResponse;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -37,5 +38,15 @@ public class order {
     @PrePersist
     protected void onCreate() {
         orderTime = LocalDateTime.now();
+    }
+
+    public orderResponse toResponse() {
+        orderResponse orderResponse = new orderResponse();
+        orderResponse.setId(this.id);
+        orderResponse.setCode(this.code);
+        orderResponse.setStatus(this.status);
+        orderResponse.setTotalPrice(this.totalPrice);
+        orderResponse.setOrderTime(this.orderTime.toString());
+        return  orderResponse;
     }
 }

@@ -11,11 +11,11 @@ public class webSocketService {
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
     public void sendNotificationToUser(String username, String message) {
-        ResponMessage responMessage = new ResponMessage();
-        account account = new account();
-        account.setUsername(message);
-        responMessage.setData(account);
-        messagingTemplate.convertAndSendToUser(username, "/queue/notifications", responMessage);
+//        ResponMessage responMessage = new ResponMessage();
+//        account account = new account();
+//        account.setUsername(message);
+//        responMessage.setData(account);
+        messagingTemplate.convertAndSendToUser(username, "/queue/notifications",message );
     }
     public void sendNotification(String message) {
 
