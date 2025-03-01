@@ -17,12 +17,8 @@ import java.util.Date;
 public class jwtProvider {
     @Autowired
     accountRepository accountRepository;
-    //	@Value("$(secret_key)")
-//    Key key = Keys.secretKeyFor(SignatureAlgorithm.HS512);
     private String jwtSecret ="VUVNDUC050120011234567890QWERTYUIPASDFGHJKLZXCVBNMQASXCFVGBJHBFHCDGVCGNVCGVHCFHBBCAOKFLWJDJGKDJRVJFHJFHDJRHFHDSHRYCHDJSJFHDH"; // Base64.getEncoder().encodeToString(key.getEncoded());
-    //	private final String LOCALHOST_IPV4 = "127.0.0.1";
-//	private final String LOCALHOST_IPV6 = "0:0:0:0:0:0:0:1";
-    public static final Long time_expire = 7200000L;
+    public static final Long time_expire = 28800000L;
 
     public String generateToken(String userName) {
         Date date = new Date(System.currentTimeMillis() + jwtProvider.time_expire);

@@ -32,6 +32,14 @@ public class constant {
         public static final String PREFIX_AUTH = "/api/v1/project/auth";
     }
 
+    public static final class ACTION {
+
+        public static final String CANCEL = "cancel";
+        public static final String CONFIRM = "confirm";
+        public static final String DONE = "done";
+
+    }
+
     public static final class MESSAGE {
         public static final String SUCCESS = "Successfully";
         public static final String ERROR = "Error";

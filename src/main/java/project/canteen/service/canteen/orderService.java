@@ -3,6 +3,7 @@ package project.canteen.service.canteen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.canteen.common.constant;
+import project.canteen.config.jwtConfig.jwtProvider;
 import project.canteen.entity.auth.account;
 import project.canteen.entity.canteen.*;
 import project.canteen.model.auth.ResponMessage;
@@ -11,12 +12,12 @@ import project.canteen.model.canteen.cartItemInfo;
 import project.canteen.model.canteen.createOrderModel;
 import project.canteen.model.canteen.orderResponse;
 import project.canteen.repository.auth.accountRepository;
-import project.canteen.repository.canteen.cartItemRepository;
-import project.canteen.repository.canteen.cartRepository;
-import project.canteen.repository.canteen.orderItemRepository;
-import project.canteen.repository.canteen.orderRepository;
+import project.canteen.repository.canteen.*;
 import project.canteen.service.webSocket.webSocketService;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 
 @Service
@@ -33,6 +34,12 @@ public class orderService {
     private cartItemRepository cartItemRepository;
     @Autowired
     private webSocketService webSocketService;
+    @Autowired
+    private jwtProvider jwtProvider;
+    @Autowired
+    private actionRepository actionRepository;
+    @Autowired
+    private actionDetailRepository actionDetailRepository;
 
     public ResponMessage createOrder(createOrderModel createOrderModel) {
         ResponMessage responMessage = new ResponMessage();
@@ -72,6 +79,7 @@ public class orderService {
                     orderItem.setPrice(cartItem.getPrice());
                     orderItemRepository.save(orderItem);
                 });
+                webSocketService.sendNotification("New order");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(orderSaved.toResponse());
@@ -92,7 +100,7 @@ public class orderService {
         }
         return responMessage;
     }
-    public ResponMessage cancelOrder(Long orderId) {
+    public ResponMessage cancelOrder(Long orderId, String token) {
         ResponMessage responMessage = new ResponMessage();
         try{
             order order = orderRepository.findOrderById(orderId);
@@ -106,6 +114,14 @@ public class orderService {
                 responMessage.setData("Can not cancel order id = "+orderId+ " because status is not equal unconfirmed");
             }
             else {
+                String username = jwtProvider.getLoginFormToke(token);
+                account account = accountRepository.findUserByUsername(username);
+                action action = actionRepository.findActionByName(constant.ACTION.CANCEL);
+                actionDetail actionDetail = new actionDetail();
+                actionDetail.setAction(action);
+                actionDetail.setOrder_id(orderId);
+                actionDetail.setAccount_id(account.getId());
+                actionDetailRepository.save(actionDetail);
                 order.setStatus(constant.STATUS.CANCEL);
                 orderRepository.save(order);
                 webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đã bị hủy:"+orderId);
@@ -177,6 +193,73 @@ public class orderService {
         return responMessage;
     }
 
+    public ResponMessage getTotalRevenueLastDays(int day) {
+        ResponMessage responMessage = new ResponMessage();
+        try{
+            List<Object[]> results = orderRepository.getTotalRevenueLastDays(day);
+            List<Map<String, Object>> statistics = new ArrayList<>();
+
+            for (Object[] row : results) {
+                Map<String, Object> map = new HashMap<>();
+
+                // Ép kiểu đúng: java.sql.Date -> LocalDate
+                LocalDate orderDate = ((java.sql.Date) row[0]).toLocalDate();
+
+                map.put("orderDate", orderDate.toString()); // Chuyển về String "yyyy-MM-dd"
+                map.put("totalRevenue", row[1]); // Tổng doanh thu
+                statistics.add(map);
+            }
+            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+            responMessage.setMessage(constant.MESSAGE.SUCCESS);
+            responMessage.setData(statistics);
+
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(constant.MESSAGE.ERROR);
+            responMessage.setData(e.getMessage());
+        }
+        return responMessage;
+    }
+
+    public ResponMessage getTotalRevenueLastMonths(int month) {
+        ResponMessage responMessage = new ResponMessage();
+        try{
+            List<Object[]> results = orderRepository.getTotalRevenueLastMonths(month);
+            List<Map<String, Object>> statistics = new ArrayList<>();
+
+            for (Object[] row : results) {
+                Map<String, Object> map = new HashMap<>();
+                map.put("orderMonth", row[0]); // Chuyển về String "yyyy-MM-dd"
+                map.put("totalRevenue", row[1]); // Tổng doanh thu
+                statistics.add(map);
+            }
+            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+            responMessage.setMessage(constant.MESSAGE.SUCCESS);
+            responMessage.setData(statistics);
+
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(constant.MESSAGE.ERROR);
+            responMessage.setData(e.getMessage());
+        }
+        return responMessage;
+    }
+
+    public ResponMessage getTotalRevenueToday() {
+        ResponMessage responMessage = new ResponMessage();
+        try{
+            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+            responMessage.setMessage(constant.MESSAGE.SUCCESS);
+            responMessage.setData(orderRepository.getTotalRevenueToday());
+
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(constant.MESSAGE.ERROR);
+            responMessage.setData(e.getMessage());
+        }
+        return responMessage;
+    }
+
     public ResponMessage getOrderItemByOrderId(Long orderId) {
         ResponMessage responMessage = new ResponMessage();
         try{
@@ -216,7 +299,7 @@ public class orderService {
         return responMessage;
     }
 
-    public ResponMessage preparingOrder(Long orderId) {
+    public ResponMessage preparingOrder(Long orderId,String token) {
         ResponMessage responMessage = new ResponMessage();
         try{
             order order = orderRepository.findOrderById(orderId);
@@ -227,6 +310,14 @@ public class orderService {
             } else if(order.getStatus().equals(constant.STATUS.UN_CONFIRMED)) {
                 order.setStatus(constant.STATUS.PREPARING);
                 orderRepository.save(order);
+                String username = jwtProvider.getLoginFormToke(token);
+                account account = accountRepository.findUserByUsername(username);
+                action action = actionRepository.findActionByName(constant.ACTION.CONFIRM);
+                actionDetail actionDetail = new actionDetail();
+                actionDetail.setAction(action);
+                actionDetail.setOrder_id(orderId);
+                actionDetail.setAccount_id(account.getId());
+                actionDetailRepository.save(actionDetail);
                 webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đang được chuẩn bị:"+orderId);
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
@@ -241,7 +332,7 @@ public class orderService {
     }
 
 
-    public ResponMessage doneOrder(Long orderId) {
+    public ResponMessage doneOrder(Long orderId,String token) {
         ResponMessage responMessage = new ResponMessage();
         try{
             order order = orderRepository.findOrderById(orderId);
@@ -252,6 +343,14 @@ public class orderService {
             } else if(order.getStatus().equals(constant.STATUS.PREPARING)) {
                 order.setStatus(constant.STATUS.DONE);
                 orderRepository.save(order);
+                String username = jwtProvider.getLoginFormToke(token);
+                account account = accountRepository.findUserByUsername(username);
+                action action = actionRepository.findActionByName(constant.ACTION.DONE);
+                actionDetail actionDetail = new actionDetail();
+                actionDetail.setAction(action);
+                actionDetail.setOrder_id(orderId);
+                actionDetail.setAccount_id(account.getId());
+                actionDetailRepository.save(actionDetail);
                 webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đã hoàn thành:"+orderId);
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);

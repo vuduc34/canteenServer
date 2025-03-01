@@ -21,4 +21,24 @@ public interface orderRepository extends JpaRepository<order, Long> {
 
     @Query(value = "SELECT * from `order` where status = 'unconfirmed' or status = 'preparing' ORDER BY `order_time` ASC", nativeQuery = true)
     List<order> findOrderPreparingOrUnconfirmed();
+
+    @Query(value = "SELECT DATE(o.order_time) AS orderDate, SUM(o.total_price) AS totalRevenue " +
+            "FROM `order` o " +
+            "WHERE o.order_time >= CURRENT_DATE - :days and o.status = 'done' " +
+            "GROUP BY DATE(o.order_time) " +
+            "ORDER BY orderDate ASC",nativeQuery = true)
+    List<Object[]> getTotalRevenueLastDays(@Param("days") int days);
+
+
+    @Query(value = "SELECT DATE_FORMAT(o.order_time, '%Y-%m') AS orderMonth, SUM(o.total_price) AS totalRevenue " +
+            "FROM `order` o " +
+            "WHERE o.order_time >= DATE_SUB(CURDATE(), INTERVAL :months MONTH) and o.status = 'done' " +
+            "GROUP BY DATE_FORMAT(o.order_time, '%Y-%m') " +
+            "ORDER BY orderMonth ASC", nativeQuery = true)
+    List<Object[]> getTotalRevenueLastMonths(@Param("months") int months);
+
+
+    @Query(value = "SELECT SUM(o.total_price) FROM `order` o " +
+            "WHERE DATE(o.order_time) = DATE(CONVERT_TZ(NOW(), 'UTC', 'Asia/Ho_Chi_Minh')) and o.status = 'done'", nativeQuery = true)
+    Long getTotalRevenueToday();
 }

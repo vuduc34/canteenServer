@@ -7,6 +7,7 @@ import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 @SpringBootApplication
 @EnableWebMvc
 public class CanteenApplication {

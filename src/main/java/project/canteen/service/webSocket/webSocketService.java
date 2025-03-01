@@ -18,7 +18,6 @@ public class webSocketService {
         messagingTemplate.convertAndSendToUser(username, "/queue/notifications",message );
     }
     public void sendNotification(String message) {
-
         messagingTemplate.convertAndSend("/topic/public", message);
     }
 }

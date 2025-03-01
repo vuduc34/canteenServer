@@ -23,21 +23,21 @@ public class orderController {
     @PutMapping(value = "/order/cancel")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_STAFF')")
-    public ResponMessage cancelOrder(@RequestParam Long orderId) {
-        return orderService.cancelOrder(orderId);
+    public ResponMessage cancelOrder(@RequestParam Long orderId,@RequestHeader("Authorization") String token) {
+        return orderService.cancelOrder(orderId,token);
     }
     @PutMapping(value = "/order/preparing")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_STAFF')")
-    public ResponMessage preparingOrder(@RequestParam Long orderId) {
-        return orderService.preparingOrder(orderId);
+    public ResponMessage preparingOrder(@RequestParam Long orderId,@RequestHeader("Authorization") String token) {
+        return orderService.preparingOrder(orderId,token);
     }
 
     @PutMapping(value = "/order/done")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_STAFF')")
-    public ResponMessage doneOrder(@RequestParam Long orderId) {
-        return orderService.doneOrder(orderId);
+    public ResponMessage doneOrder(@RequestParam Long orderId,@RequestHeader("Authorization") String token) {
+        return orderService.doneOrder(orderId,token);
     }
 
     @GetMapping(value = "/order/findOrderByAccountId")
@@ -58,5 +58,26 @@ public class orderController {
     @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage getOrderPreparingOrUnconfirmed() {
         return orderService.getOrderPreparingOrUnconfirmed();
+    }
+
+    @GetMapping(value = "/order/getTotalRevenueLastDays")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalRevenueLastDays(@RequestParam int day) {
+        return orderService.getTotalRevenueLastDays(day);
+    }
+
+    @GetMapping(value = "/order/getTotalRevenueLastMonths")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalRevenueLastMonths(@RequestParam int month) {
+        return orderService.getTotalRevenueLastMonths(month);
+    }
+
+    @GetMapping(value = "/order/getTotalRevenueToday")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalRevenueToday() {
+        return orderService.getTotalRevenueToday();
     }
 }
