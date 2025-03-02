@@ -22,7 +22,6 @@ public class orderController {
     }
     @PutMapping(value = "/order/cancel")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage cancelOrder(@RequestParam Long orderId,@RequestHeader("Authorization") String token) {
         return orderService.cancelOrder(orderId,token);
     }
@@ -79,5 +78,26 @@ public class orderController {
     @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage getTotalRevenueToday() {
         return orderService.getTotalRevenueToday();
+    }
+
+    @GetMapping(value = "/order/getTotalDoneOrdersToday")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalDoneOrdersToday() {
+        return orderService.getTotalOrdersTodayByStatus(constant.STATUS.DONE);
+    }
+
+    @GetMapping(value = "/order/getTotalPreparingOrdersToday")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalPreparingOrdersToday() {
+        return orderService.getTotalOrdersTodayByStatus(constant.STATUS.PREPARING);
+    }
+
+    @GetMapping(value = "/order/getTotalUnConfirmOrdersToday")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage getTotalUnConfirmOrdersToday() {
+        return orderService.getTotalOrdersTodayByStatus(constant.STATUS.UN_CONFIRMED);
     }
 }

@@ -131,10 +131,13 @@ public class accountService {
                 //get cart id
                 cart cart = account.getCart();
                 if(cart == null) {
-                    loginResponse.setCart_id(null);
-                } else {
-                    loginResponse.setCart_id(cart.getId());
+                    cart newCart = new cart();
+                    newCart.setTotalPrice(0L);
+                    newCart.setAccount(account);
+                    cartRepository.save(newCart);
                 }
+                cart = cartRepository.findCartByAccountId(account.getId());
+                loginResponse.setCart_id(cart.getId());
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(loginResponse);
@@ -280,10 +283,6 @@ public class accountService {
     }
 
 
-
-
-
-
     public ResponMessage findAll() {
         ResponMessage responMessage = new ResponMessage();
         try {
@@ -327,6 +326,8 @@ public class accountService {
         ResponMessage responMessage = new ResponMessage();
         try {
             account account = accountRepository.findUserByUsername(username);
+            account.setRoles(null);
+            accountRepository.save(account);
             accountRepository.delete(account);
             responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
             responMessage.setMessage(constant.MESSAGE.SUCCESS);

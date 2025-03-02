@@ -41,4 +41,12 @@ public interface orderRepository extends JpaRepository<order, Long> {
     @Query(value = "SELECT SUM(o.total_price) FROM `order` o " +
             "WHERE DATE(o.order_time) = DATE(CONVERT_TZ(NOW(), 'UTC', 'Asia/Ho_Chi_Minh')) and o.status = 'done'", nativeQuery = true)
     Long getTotalRevenueToday();
+
+    @Query(value = "SELECT COUNT(*) FROM `order` o " +
+            "WHERE DATE(o.order_time) = DATE(CONVERT_TZ(NOW(), 'UTC', 'Asia/Ho_Chi_Minh'))" +
+            " AND o.status = :status", nativeQuery = true)
+    int getTotalOrdersTodayByStatus(@Param("status") String status);
+
+
+
 }

@@ -79,7 +79,7 @@ public class orderService {
                     orderItem.setPrice(cartItem.getPrice());
                     orderItemRepository.save(orderItem);
                 });
-                webSocketService.sendNotification("New order");
+                webSocketService.sendNotification("newOrder");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(orderSaved.toResponse());
@@ -116,15 +116,18 @@ public class orderService {
             else {
                 String username = jwtProvider.getLoginFormToke(token);
                 account account = accountRepository.findUserByUsername(username);
-                action action = actionRepository.findActionByName(constant.ACTION.CANCEL);
-                actionDetail actionDetail = new actionDetail();
-                actionDetail.setAction(action);
-                actionDetail.setOrder_id(orderId);
-                actionDetail.setAccount_id(account.getId());
-                actionDetailRepository.save(actionDetail);
+                if(!account.getRoles().iterator().next().getName().equals(constant.ROLE.USER)) {
+                    action action = actionRepository.findActionByName(constant.ACTION.CANCEL);
+                    actionDetail actionDetail = new actionDetail();
+                    actionDetail.setAction(action);
+                    actionDetail.setOrder_id(orderId);
+                    actionDetail.setAccount_id(account.getId());
+                    actionDetailRepository.save(actionDetail);
+                }
                 order.setStatus(constant.STATUS.CANCEL);
                 orderRepository.save(order);
                 webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đã bị hủy:"+orderId);
+                webSocketService.sendNotification("cancelOrder");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(order.toResponse());
@@ -251,6 +254,21 @@ public class orderService {
             responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
             responMessage.setMessage(constant.MESSAGE.SUCCESS);
             responMessage.setData(orderRepository.getTotalRevenueToday());
+
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(constant.MESSAGE.ERROR);
+            responMessage.setData(e.getMessage());
+        }
+        return responMessage;
+    }
+
+    public ResponMessage getTotalOrdersTodayByStatus(String status) {
+        ResponMessage responMessage = new ResponMessage();
+        try{
+            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+            responMessage.setMessage(constant.MESSAGE.SUCCESS);
+            responMessage.setData(orderRepository.getTotalOrdersTodayByStatus(status));
 
         } catch (Exception e) {
             responMessage.setResultCode(constant.RESULT_CODE.ERROR);

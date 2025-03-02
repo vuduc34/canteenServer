@@ -28,17 +28,15 @@ public class jwtProvider {
     }
 
     public boolean validateToken(String token) {
-
-        if(accountRepository.findUserByUsername(getLoginFormToke(token)).getStatus() == constant.STATUS.DE_ACTIVE) {
-            return false;
-        }
         try {
+            if(accountRepository.findUserByUsername(getLoginFormToke(token)).getStatus() == constant.STATUS.DE_ACTIVE) {
+                return false;
+            }
             Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token);
             return true;
         } catch (Exception e) {
+            return false;
         }
-        return false;
-
     }
 
     public String getLoginFormToke(String token) {

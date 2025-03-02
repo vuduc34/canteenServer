@@ -37,7 +37,7 @@ public class emailService
             msg.setText("Thân gửi bạn!\n"
                     + "Hệ thống đã nhận được yêu cầu đăng kí tài khoản của bạn. Đây là mã code để kích hoạt tài khoản. Vui lòng không tiết lộ mã code với bất kỳ ai, nếu tiết lộ, bạn có nguy cơ bị mất tài khoản.  \n"
                     + "Code : " + code + "\n" + "Nếu không phải bạn, vui lòng bỏ qua email này.\n \n \n"
-                    + "Trân trọng cảm ơn!\n" + "Đõ Đại Dương.\n" + "SĐT: 0123456789");
+                    + "Trân trọng cảm ơn!\n" + "Đỗ Đại Dương.\n" + "SĐT: 0123456789");
             mailSender.send(msg);
             return "send mail successfully";
         } catch (Exception e) {
