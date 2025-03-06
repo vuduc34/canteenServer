@@ -19,6 +19,21 @@ public class foodController {
         return foodService.findAlll();
     }
 
+    @GetMapping("/food/findAllAvailable")
+    @ResponseBody
+    public ResponMessage findAllAvailable() {
+        return foodService.findAllAvailable();
+    }
+
+    @GetMapping("/food/findAllPageable")
+    @ResponseBody
+    public ResponMessage findAllPageable(
+            @RequestParam(defaultValue = "0") int page,  // Trang mặc định là 0
+            @RequestParam(defaultValue = "5") int size  // Số lượng mặc định là 5
+    ) {
+        return foodService.findAllPageable(page, size);
+    }
+
     @GetMapping("/food/findByCategoryId")
     @ResponseBody
     public ResponMessage findByCategoryId(@RequestParam Long categoryId) {

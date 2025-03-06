@@ -8,6 +8,8 @@ import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import java.time.ZoneId;
+
 @SpringBootApplication
 @EnableWebMvc
 public class CanteenApplication {

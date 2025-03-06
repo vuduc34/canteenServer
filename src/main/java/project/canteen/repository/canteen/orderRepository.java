@@ -16,7 +16,7 @@ public interface orderRepository extends JpaRepository<order, Long> {
     @Query(value = "SELECT * from `order` where code = :code", nativeQuery = true)
     order findOrderByCode(@Param("code") String code);
 
-    @Query(value = "SELECT * from `order` where account_id = :account_id", nativeQuery = true)
+    @Query(value = "SELECT * from `order` where account_id = :account_id order by id desc", nativeQuery = true)
     List<order> findOrderByAccountId(@Param("account_id") Long account_id);
 
     @Query(value = "SELECT * from `order` where status = 'unconfirmed' or status = 'preparing' ORDER BY `order_time` ASC", nativeQuery = true)
@@ -24,7 +24,7 @@ public interface orderRepository extends JpaRepository<order, Long> {
 
     @Query(value = "SELECT DATE(o.order_time) AS orderDate, SUM(o.total_price) AS totalRevenue " +
             "FROM `order` o " +
-            "WHERE o.order_time >= CURRENT_DATE - :days and o.status = 'done' " +
+            "WHERE o.order_time >= CURRENT_DATE - INTERVAL :days DAY  and o.status = 'done' " +
             "GROUP BY DATE(o.order_time) " +
             "ORDER BY orderDate ASC",nativeQuery = true)
     List<Object[]> getTotalRevenueLastDays(@Param("days") int days);

@@ -1,6 +1,8 @@
 package project.canteen.service.canteen;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import project.canteen.common.constant;
@@ -10,6 +12,7 @@ import project.canteen.model.auth.ResponMessage;
 import project.canteen.repository.canteen.categoryRepository;
 import project.canteen.repository.canteen.foodRepository;
 import project.canteen.service.auth.imageService;
+import project.canteen.service.webSocket.webSocketService;
 
 @Service
 public class foodService {
@@ -19,14 +22,34 @@ public class foodService {
     private imageService imageService;
     @Autowired
     private categoryRepository categoryRepository;
+    @Autowired
+    private webSocketService webSocketService;
 
     public ResponMessage findAlll() {
         ResponMessage responMessage = new ResponMessage();
         responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
         responMessage.setMessage(constant.MESSAGE.SUCCESS);
-        responMessage.setData(foodRepository.findAll());
+        responMessage.setData(foodRepository.findAllFood());
         return responMessage;
     }
+
+    public ResponMessage findAllAvailable() {
+        ResponMessage responMessage = new ResponMessage();
+        responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+        responMessage.setMessage(constant.MESSAGE.SUCCESS);
+        responMessage.setData(foodRepository.findAllAvailable());
+        return responMessage;
+    }
+
+    public ResponMessage findAllPageable(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        ResponMessage responMessage = new ResponMessage();
+        responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+        responMessage.setMessage(constant.MESSAGE.SUCCESS);
+        responMessage.setData(foodRepository.findAll(pageable));
+        return responMessage;
+    }
+
     public ResponMessage findByCategory(Long categoryId) {
         ResponMessage responMessage = new ResponMessage();
         responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
@@ -49,6 +72,7 @@ public class foodService {
                 responMessage.setData("Not found category with id = "+category_id);
             } else {
                 foodRepository.save(foodItem);
+                webSocketService.sendNotification("updateFood");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData("Successfully");
@@ -83,6 +107,7 @@ public class foodService {
                    current.setStatus(constant.STATUS.UN_AVAILABLE);
                }
                foodRepository.save(current);
+               webSocketService.sendNotification("updateFood");
                responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                responMessage.setMessage(constant.MESSAGE.SUCCESS);
                responMessage.setData(current);
@@ -98,7 +123,11 @@ public class foodService {
     public ResponMessage delete(Long id) {
         ResponMessage responMessage = new ResponMessage();
         try{
-           foodRepository.deleteById(id);
+           foodItem foodItem = foodRepository.findFoodById(id);
+           if(foodItem != null) {
+               foodItem.setStatus(constant.STATUS.DELETEED);
+               foodRepository.save(foodItem);
+           }
            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
            responMessage.setMessage(constant.MESSAGE.SUCCESS);
            responMessage.setData("Successfully");

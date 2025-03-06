@@ -283,16 +283,27 @@ public class accountService {
     }
 
 
-    public ResponMessage findAll() {
+    public ResponMessage findAll(String role) {
         ResponMessage responMessage = new ResponMessage();
         try {
             List<AccountDTO> list = new ArrayList<>();
-            accountRepository.findAll().forEach(e -> {
-                AccountDTO accountDTO  = e.toDTO();
-                if(e.getRoles().size()!=0)
-                    accountDTO.setRole(e.getRoles().iterator().next().getName());
-                list.add(accountDTO);
-            });
+            if(role.equals(constant.ROLE.ADMIN)) {
+                accountRepository.findAll().forEach(e -> {
+                    AccountDTO accountDTO  = e.toDTO();
+                    if(e.getRoles().size()!=0)
+                        accountDTO.setRole(e.getRoles().iterator().next().getName());
+                    list.add(accountDTO);
+                });
+            } else if(role.equals(constant.ROLE.STAFF)) {
+                accountRepository.findAll().forEach(e -> {
+                    if(e.getRoles().iterator().next().getName().equals(constant.ROLE.USER)) {
+                        AccountDTO accountDTO  = e.toDTO();
+                        if(e.getRoles().size()!=0)
+                            accountDTO.setRole(e.getRoles().iterator().next().getName());
+                        list.add(accountDTO);
+                    }
+                });
+            }
             responMessage.setData(list);
             responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
             responMessage.setMessage(constant.MESSAGE.SUCCESS);

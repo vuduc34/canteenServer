@@ -14,6 +14,8 @@ public class constant {
         public static  final String PREPARING = "preparing";
         public static  final String DONE = "done";
         public static  final String CANCEL = "cancel";
+        public static final String REJECTED = "rejected";
+        public static final String DELETEED = "deleted";
     }
 
     public static final class RESULT_CODE {
@@ -37,6 +39,7 @@ public class constant {
         public static final String CANCEL = "cancel";
         public static final String CONFIRM = "confirm";
         public static final String DONE = "done";
+        public static final String REJECTED = "rejected";
 
     }
 
@@ -55,7 +58,7 @@ public class constant {
 
     public static final class ROLE {
         public static final String USER = "ROLE_USER";
-        public static final String STAFF = "ROLE_STAFFF";
+        public static final String STAFF = "ROLE_STAFF";
         public static final String ADMIN = "ROLE_ADMIN";
     }
 

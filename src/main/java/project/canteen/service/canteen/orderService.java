@@ -336,7 +336,7 @@ public class orderService {
                 actionDetail.setOrder_id(orderId);
                 actionDetail.setAccount_id(account.getId());
                 actionDetailRepository.save(actionDetail);
-                webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đang được chuẩn bị:"+orderId);
+                webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"preparingOrder");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(order.toResponse());
@@ -369,7 +369,39 @@ public class orderService {
                 actionDetail.setOrder_id(orderId);
                 actionDetail.setAccount_id(account.getId());
                 actionDetailRepository.save(actionDetail);
-                webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"Đơn hàng của bạn đã hoàn thành:"+orderId);
+                webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"doneOrder");
+                responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
+                responMessage.setMessage(constant.MESSAGE.SUCCESS);
+                responMessage.setData(order.toResponse());
+            }
+        } catch (Exception e) {
+            responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+            responMessage.setMessage(constant.MESSAGE.ERROR);
+            responMessage.setData(e.getMessage());
+        }
+        return responMessage;
+    }
+
+    public ResponMessage rejectOrder(Long orderId,String token) {
+        ResponMessage responMessage = new ResponMessage();
+        try{
+            order order = orderRepository.findOrderById(orderId);
+            if(order == null) {
+                responMessage.setResultCode(constant.RESULT_CODE.ERROR);
+                responMessage.setMessage(constant.MESSAGE.ERROR);
+                responMessage.setData("Not found order id = "+orderId);
+            } else if(order.getStatus().equals(constant.STATUS.DONE)) {
+                order.setStatus(constant.STATUS.REJECTED);
+                orderRepository.save(order);
+                String username = jwtProvider.getLoginFormToke(token);
+                account account = accountRepository.findUserByUsername(username);
+                action action = actionRepository.findActionByName(constant.ACTION.REJECTED);
+                actionDetail actionDetail = new actionDetail();
+                actionDetail.setAction(action);
+                actionDetail.setOrder_id(orderId);
+                actionDetail.setAccount_id(account.getId());
+                actionDetailRepository.save(actionDetail);
+                webSocketService.sendNotificationToUser(order.getAccount().getUsername(),"rejectOrder");
                 responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
                 responMessage.setMessage(constant.MESSAGE.SUCCESS);
                 responMessage.setData(order.toResponse());

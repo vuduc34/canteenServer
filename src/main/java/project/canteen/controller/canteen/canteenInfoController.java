@@ -9,20 +9,19 @@ import project.canteen.model.auth.ResponMessage;
 import project.canteen.service.canteen.CanteenInfoService;
 
 @RestController
-@RequestMapping(constant.API.PREFIX)
+
 public class canteenInfoController {
     @Autowired
     private CanteenInfoService canteenInfoService;
 
-    @PostMapping (value = "/canteenInfo/update")
+    @PostMapping (value =constant.API.PREFIX+ "/canteenInfo/update")
     @PreAuthorize("hasRole('ROLE_STAFF')")
     @ResponseBody
     public ResponMessage updateCanteenInfo(@RequestBody canteenInfo canteenInfo) {
         return canteenInfoService.update(canteenInfo);
     }
 
-    @GetMapping(value = "/canteenInfo/get")
-    @PreAuthorize("hasRole('ROLE_STAFF')")
+    @GetMapping(value =constant.API.PREFIX_AUTH+ "/canteenInfo/get")
     @ResponseBody
     public ResponMessage getCanteenInfo() {
         return canteenInfoService.getCanteenInfo();

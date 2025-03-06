@@ -8,6 +8,8 @@ import project.canteen.entity.auth.account;
 import project.canteen.model.canteen.orderResponse;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Set;
 
@@ -43,12 +45,13 @@ public class order {
 
     public orderResponse toResponse() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        ZonedDateTime vietnamTime = this.orderTime.atZone(ZoneId.of("Asia/Ho_Chi_Minh"));
         orderResponse orderResponse = new orderResponse();
         orderResponse.setId(this.id);
         orderResponse.setCode(this.code);
         orderResponse.setStatus(this.status);
         orderResponse.setTotalPrice(this.totalPrice);
-        orderResponse.setOrderTime(this.orderTime.format(formatter));
+        orderResponse.setOrderTime(this.orderTime.plusHours(7).format(formatter));
         return  orderResponse;
     }
 }

@@ -1,5 +1,8 @@
 package project.canteen.repository.canteen;
 
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,4 +19,12 @@ public interface foodRepository extends JpaRepository<foodItem, Long> {
 
     @Query(value = "SELECT * from food_item where id = :id", nativeQuery = true)
     foodItem findFoodById(@Param("id") Long id);
+
+    @Query(value = "SELECT * from food_item where status = 'available'", nativeQuery = true)
+    Page<foodItem> findAll(Pageable pageable);
+
+    @Query(value = "SELECT * from food_item where status = 'available'", nativeQuery = true)
+    List<foodItem> findAllAvailable();
+    @Query(value = "SELECT * from food_item where status != 'deleted'", nativeQuery = true)
+    List<foodItem> findAllFood();
 }

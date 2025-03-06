@@ -32,6 +32,13 @@ public class orderController {
         return orderService.preparingOrder(orderId,token);
     }
 
+    @PutMapping(value = "/order/rejected")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage rejectedOrder(@RequestParam Long orderId,@RequestHeader("Authorization") String token) {
+        return orderService.rejectOrder(orderId,token);
+    }
+
     @PutMapping(value = "/order/done")
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_STAFF')")

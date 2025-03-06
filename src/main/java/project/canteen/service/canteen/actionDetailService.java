@@ -13,6 +13,8 @@ import project.canteen.repository.auth.accountRepository;
 import project.canteen.repository.canteen.actionDetailRepository;
 import project.canteen.repository.canteen.orderRepository;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +45,12 @@ public class actionDetailService {
 
                 actionDetails.forEach(actionDetail -> {
                     actionDetailResponse actionDetailResponse = new actionDetailResponse();
+                    // convert to VN time
+//                    ZonedDateTime vietnamTime = actionDetail.getTimeCreate().atZone(ZoneId.of("Asia/Ho_Chi_Minh"));
+                    actionDetailResponse.setTimeCreate(actionDetail.getTimeCreate().plusHours(7).format(formatter));
                     actionDetailResponse.setAccountStaffName(account.getFullname());
-                    actionDetailResponse.setTimeCreate(actionDetail.getTimeCreate().format(formatter));
+
+
                     order order = orderRepository.findOrderById(actionDetail.getOrder_id());
                     actionDetailResponse.setTotalPrice(order.getTotalPrice());
                     actionDetailResponse.setAccountUserName(order.getAccount().getFullname());

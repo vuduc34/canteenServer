@@ -29,27 +29,27 @@ public class accountController {
     }
     @GetMapping("/account/findAll")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponMessage findAlll() {
-        return accountService.findAll();
+    @PreAuthorize("hasRole('ROLE_STAFF')")
+    public ResponMessage findAlll(@RequestParam String role) {
+        return accountService.findAll(role);
     }
     @GetMapping("/account/findAllRole")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage findAlllRole() {
         return accountService.findAllRole();
     }
 
     @GetMapping("/account/activeAccount")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage activeAccount(@RequestParam String username) {
         return accountService.activeStatus(username);
     }
 
     @GetMapping("/account/deactiveAccount")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_STAFF')")
     public ResponMessage deactiveAccount(@RequestParam String username) {
         return accountService.deactiveStatus(username);
     }
