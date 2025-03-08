@@ -9,6 +9,7 @@ import project.canteen.common.constant;
 import project.canteen.entity.canteen.category;
 import project.canteen.entity.canteen.foodItem;
 import project.canteen.model.auth.ResponMessage;
+import project.canteen.repository.canteen.cartItemRepository;
 import project.canteen.repository.canteen.categoryRepository;
 import project.canteen.repository.canteen.foodRepository;
 import project.canteen.service.auth.imageService;
@@ -24,6 +25,8 @@ public class foodService {
     private categoryRepository categoryRepository;
     @Autowired
     private webSocketService webSocketService;
+    @Autowired
+    private cartItemRepository cartItemRepository;
 
     public ResponMessage findAlll() {
         ResponMessage responMessage = new ResponMessage();
@@ -105,6 +108,7 @@ public class foodService {
                    current.setStatus(foodItem.getStatus());
                } else {
                    current.setStatus(constant.STATUS.UN_AVAILABLE);
+                   cartItemRepository.deleteCartItemByItemId(current.getId());
                }
                foodRepository.save(current);
                webSocketService.sendNotification("updateFood");
@@ -127,6 +131,8 @@ public class foodService {
            if(foodItem != null) {
                foodItem.setStatus(constant.STATUS.DELETEED);
                foodRepository.save(foodItem);
+               cartItemRepository.deleteCartItemByItemId(id);
+               webSocketService.sendNotification("updateFood");
            }
            responMessage.setResultCode(constant.RESULT_CODE.SUCCESS);
            responMessage.setMessage(constant.MESSAGE.SUCCESS);

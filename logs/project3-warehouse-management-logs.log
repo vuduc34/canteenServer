@@ -1,22 +1,22 @@
-2025-03-06T13:34:43.659+07:00  INFO 21204 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : Starting CanteenApplication using Java 21.0.6 with PID 21204 (D:\Project\PSA\canteen\target\classes started by vuvan in D:\Project\PSA\canteen)
-2025-03-06T13:34:43.688+07:00  INFO 21204 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-03-06T13:34:43.773+07:00  INFO 21204 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-03-06T13:34:43.774+07:00  INFO 21204 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-03-06T13:34:47.469+07:00  INFO 21204 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-03-06T13:34:47.797+07:00  INFO 21204 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 305 ms. Found 11 JPA repository interfaces.
-2025-03-06T13:34:49.804+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-03-06T13:34:49.837+07:00  INFO 21204 --- [canteen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-03-06T13:34:49.838+07:00  INFO 21204 --- [canteen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-03-06T13:34:49.900+07:00  INFO 21204 --- [canteen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-03-06T13:34:49.901+07:00  INFO 21204 --- [canteen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6124 ms
-2025-03-06T13:34:50.128+07:00  INFO 21204 --- [canteen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-03-06T13:34:50.196+07:00  INFO 21204 --- [canteen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-03-06T13:34:50.246+07:00  INFO 21204 --- [canteen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-03-06T13:34:50.596+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-03-06T13:34:50.625+07:00  INFO 21204 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-06T13:34:53.260+07:00  INFO 21204 --- [canteen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24c5549
-2025-03-06T13:34:53.266+07:00  INFO 21204 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-06T13:34:53.713+07:00  INFO 21204 --- [canteen] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-03-08T14:19:10.714+07:00  INFO 4020 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : Starting CanteenApplication using Java 21.0.6 with PID 4020 (D:\Project\PSA\canteen\target\classes started by vuvan in D:\Project\PSA\canteen)
+2025-03-08T14:19:10.733+07:00  INFO 4020 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-08T14:19:10.795+07:00  INFO 4020 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-08T14:19:10.796+07:00  INFO 4020 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-08T14:19:14.530+07:00  INFO 4020 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-08T14:19:14.789+07:00  INFO 4020 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 11 JPA repository interfaces.
+2025-03-08T14:19:15.629+07:00  INFO 4020 --- [canteen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-08T14:19:15.644+07:00  INFO 4020 --- [canteen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-08T14:19:15.644+07:00  INFO 4020 --- [canteen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-08T14:19:15.706+07:00  INFO 4020 --- [canteen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-08T14:19:15.706+07:00  INFO 4020 --- [canteen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4909 ms
+2025-03-08T14:19:15.877+07:00  INFO 4020 --- [canteen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-08T14:19:15.952+07:00  INFO 4020 --- [canteen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-08T14:19:15.999+07:00  INFO 4020 --- [canteen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-08T14:19:16.319+07:00  INFO 4020 --- [canteen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-08T14:19:16.356+07:00  INFO 4020 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-08T14:19:19.721+07:00  INFO 4020 --- [canteen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e3994cc
+2025-03-08T14:19:19.726+07:00  INFO 4020 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-08T14:19:20.208+07:00  INFO 4020 --- [canteen] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.40
@@ -24,200 +24,28 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-03-06T13:34:55.008+07:00  INFO 21204 --- [canteen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-03-06T13:35:00.313+07:00  INFO 21204 --- [canteen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-03-06T13:35:00.685+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-03-06T13:35:01.683+07:00  WARN 21204 --- [canteen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-06T13:35:01.765+07:00  INFO 21204 --- [canteen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
-2025-03-06T13:35:01.886+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : setHierarchy() - The following role hierarchy was set: ROLE_ADMIN > ROLE_STAFF
-2025-03-06T13:35:01.886+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_ADMIN one can reach role ROLE_STAFF in one step.
-2025-03-06T13:35:01.887+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_ADMIN one can reach [ROLE_STAFF] in one or more steps.
-2025-03-06T13:35:01.961+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
-2025-03-06T13:35:02.079+07:00 DEBUG 21204 --- [canteen] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 57 mappings in 'requestMappingHandlerMapping'
-2025-03-06T13:35:02.160+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-03-06T13:35:02.268+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-03-06T13:35:02.335+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-03-06T13:35:02.359+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.a.accountController:
-	
-2025-03-06T13:35:02.359+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.a.authController:
-	
-2025-03-06T13:35:02.359+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.a.imageController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.actionDetailController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.canteenInfoController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.cartController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.cartItemController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.categoryController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.foodController:
-	
-2025-03-06T13:35:02.360+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.foodStaffController:
-	
-2025-03-06T13:35:02.361+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.orderController:
-	
-2025-03-06T13:35:02.361+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.c.orderItemController:
-	
-2025-03-06T13:35:02.361+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	p.c.c.TestController:
-	
-2025-03-06T13:35:02.362+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	o.s.b.a.w.s.e.BasicErrorController:
-	
-2025-03-06T13:35:02.363+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	o.s.w.a.OpenApiWebMvcResource:
-	
-2025-03-06T13:35:02.363+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	
-2025-03-06T13:35:02.363+07:00 DEBUG 21204 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
-	o.s.w.u.SwaggerConfigResource:
-	
-2025-03-06T13:35:02.416+07:00 DEBUG 21204 --- [canteen] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-03-06T13:35:02.515+07:00 DEBUG 21204 --- [canteen] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-03-06T13:35:03.086+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-03-06T13:35:03.118+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
-2025-03-06T13:35:03.118+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
-2025-03-06T13:35:03.118+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2025-03-06T13:35:03.119+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1daa26fd]
-2025-03-06T13:35:03.119+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1daa26fd]
-2025-03-06T13:35:03.119+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1daa26fd]]
-2025-03-06T13:35:03.120+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2025-03-06T13:35:03.121+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:35:03.121+07:00 DEBUG 21204 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:35:03.148+07:00  INFO 21204 --- [canteen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-03-06T13:35:03.156+07:00  INFO 21204 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : Started CanteenApplication in 21.095 seconds (process running for 23.35)
-2025-03-06T13:35:15.443+07:00  INFO 21204 --- [canteen] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-03-06T13:35:15.443+07:00  INFO 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-03-06T13:35:15.443+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2025-03-06T13:35:15.443+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2025-03-06T13:35:15.444+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2025-03-06T13:35:15.445+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@26579728
-2025-03-06T13:35:15.446+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@38700c9c
-2025-03-06T13:35:15.446+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2025-03-06T13:35:15.446+07:00  INFO 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-03-06T13:35:15.470+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
-2025-03-06T13:35:15.480+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.482+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
-2025-03-06T13:35:15.485+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
-2025-03-06T13:35:15.488+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.521+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.547+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
-2025-03-06T13:35:15.548+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.549+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
-2025-03-06T13:35:15.549+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
-2025-03-06T13:35:15.550+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.555+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.559+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
-2025-03-06T13:35:15.559+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.560+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
-2025-03-06T13:35:15.560+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
-2025-03-06T13:35:15.561+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
-2025-03-06T13:35:15.562+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
-2025-03-06T13:35:15.562+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
-2025-03-06T13:35:15.574+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.574+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.574+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
-2025-03-06T13:35:15.575+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
-2025-03-06T13:35:15.576+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.576+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.576+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2025-03-06T13:35:15.578+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.591+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.613+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.635+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.910+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
-2025-03-06T13:35:15.911+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.911+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
-2025-03-06T13:35:15.912+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
-2025-03-06T13:35:15.912+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2025-03-06T13:35:15.935+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2025-03-06T13:35:15.940+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/oauth2-re (truncated)...]
-2025-03-06T13:35:15.949+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:15.986+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
-2025-03-06T13:35:15.987+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:15.987+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
-2025-03-06T13:35:15.987+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
-2025-03-06T13:35:15.988+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2025-03-06T13:35:16.665+07:00  INFO 21204 --- [canteen] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 649 ms
-2025-03-06T13:35:16.730+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2025-03-06T13:35:16.734+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
-2025-03-06T13:35:16.737+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:35:24.319+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/project/auth/signin
-2025-03-06T13:35:24.340+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-03-06T13:35:24.342+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/project/auth/signin
-2025-03-06T13:35:24.342+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/project/auth/signin", parameters={}
-2025-03-06T13:35:24.343+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.auth.authController#signIn(SignInData)
-2025-03-06T13:35:24.355+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.canteen.model.auth.SignInData@437c9c37]
-2025-03-06T13:35:25.700+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-03-06T13:35:25.701+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@7c1a6cfe]
-2025-03-06T13:35:25.707+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:36:01.183+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/project/food/delete?foodId=1
-2025-03-06T13:36:02.178+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured DELETE /api/v1/project/food/delete?foodId=1
-2025-03-06T13:36:02.179+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/api/v1/project/food/delete?foodId=1", parameters={masked}
-2025-03-06T13:36:02.182+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodStaffController#deletFood(Long)
-2025-03-06T13:36:02.185+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public project.canteen.model.auth.ResponMessage project.canteen.controller.canteen.foodStaffController.deletFood(java.lang.Long); target is of class [project.canteen.controller.canteen.foodStaffController]
-2025-03-06T13:36:02.214+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.s.a.h.RoleHierarchyImpl              : getReachableGrantedAuthorities() - From the roles [ROLE_STAFF] one can reach [ROLE_STAFF] in zero or more steps.
-2025-03-06T13:36:02.215+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public project.canteen.model.auth.ResponMessage project.canteen.controller.canteen.foodStaffController.deletFood(java.lang.Long); target is of class [project.canteen.controller.canteen.foodStaffController]
-2025-03-06T13:36:03.117+07:00  INFO 21204 --- [canteen] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2025-03-06T13:36:03.333+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-03-06T13:36:03.336+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@3c79c45b]
-2025-03-06T13:36:03.341+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:36:29.171+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/project/auth/food/findAll
-2025-03-06T13:36:30.059+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/project/auth/food/findAll
-2025-03-06T13:36:30.059+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/project/auth/food/findAll", parameters={}
-2025-03-06T13:36:30.059+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodController#findAll()
-2025-03-06T13:36:30.958+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-03-06T13:36:30.958+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@3e3c27fd]
-2025-03-06T13:36:30.961+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:37:01.272+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/project/auth/food/findAll
-2025-03-06T13:37:02.158+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/project/auth/food/findAll
-2025-03-06T13:37:02.159+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/project/auth/food/findAll", parameters={}
-2025-03-06T13:37:02.159+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodController#findAll()
-2025-03-06T13:37:02.997+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-03-06T13:37:02.998+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@82fc83a]
-2025-03-06T13:37:02.998+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:37:24.454+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/project/auth/food/findAll
-2025-03-06T13:37:25.358+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/project/auth/food/findAll
-2025-03-06T13:37:25.359+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/project/auth/food/findAll", parameters={}
-2025-03-06T13:37:25.359+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodController#findAll()
-2025-03-06T13:37:26.207+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2025-03-06T13:37:26.207+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@dc342ae]
-2025-03-06T13:37:26.209+07:00 DEBUG 21204 --- [canteen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2025-03-06T13:37:49.071+07:00  INFO 25684 --- [canteen] [main] p.canteen.CanteenApplicationTests        : Starting CanteenApplicationTests using Java 21.0.6 with PID 25684 (started by vuvan in D:\Project\PSA\canteen)
-2025-03-06T13:37:49.074+07:00  INFO 25684 --- [canteen] [main] p.canteen.CanteenApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2025-03-06T13:37:49.135+07:00 DEBUG 25684 --- [canteen] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6974a715
-2025-03-06T13:37:50.762+07:00  INFO 25684 --- [canteen] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-03-06T13:37:50.885+07:00  INFO 25684 --- [canteen] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 11 JPA repository interfaces.
-2025-03-06T13:37:51.966+07:00  INFO 25684 --- [canteen] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-03-06T13:37:52.105+07:00  INFO 25684 --- [canteen] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-03-06T13:37:52.164+07:00  INFO 25684 --- [canteen] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-03-06T13:37:52.868+07:00  INFO 25684 --- [canteen] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-03-06T13:37:52.916+07:00  INFO 25684 --- [canteen] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-06T13:37:55.637+07:00  INFO 25684 --- [canteen] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e7d3d87
-2025-03-06T13:37:55.641+07:00  INFO 25684 --- [canteen] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-06T13:37:56.145+07:00  INFO 25684 --- [canteen] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-03-08T14:19:21.417+07:00  INFO 4020 --- [canteen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-08T14:19:28.015+07:00  INFO 4020 --- [canteen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-08T14:19:28.505+07:00  INFO 4020 --- [canteen] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-08T14:19:35.166+07:00  INFO 30560 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : Starting CanteenApplication using Java 21.0.6 with PID 30560 (D:\Project\PSA\canteen\target\classes started by vuvan in D:\Project\PSA\canteen)
+2025-03-08T14:19:35.168+07:00  INFO 30560 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-08T14:19:35.223+07:00  INFO 30560 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-08T14:19:35.223+07:00  INFO 30560 --- [canteen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-08T14:19:36.426+07:00  INFO 30560 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-08T14:19:36.593+07:00  INFO 30560 --- [canteen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 11 JPA repository interfaces.
+2025-03-08T14:19:37.467+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-08T14:19:37.477+07:00  INFO 30560 --- [canteen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-08T14:19:37.477+07:00  INFO 30560 --- [canteen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-08T14:19:37.547+07:00  INFO 30560 --- [canteen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-08T14:19:37.547+07:00  INFO 30560 --- [canteen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2323 ms
+2025-03-08T14:19:37.716+07:00  INFO 30560 --- [canteen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-08T14:19:37.777+07:00  INFO 30560 --- [canteen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-08T14:19:37.810+07:00  INFO 30560 --- [canteen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-08T14:19:38.033+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-08T14:19:38.054+07:00  INFO 30560 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-08T14:19:41.030+07:00  INFO 30560 --- [canteen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9e386c3
+2025-03-08T14:19:41.036+07:00  INFO 30560 --- [canteen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-08T14:19:41.444+07:00  INFO 30560 --- [canteen] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.40
@@ -225,92 +53,282 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-03-06T13:37:58.213+07:00  INFO 25684 --- [canteen] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-03-06T13:38:03.512+07:00  INFO 25684 --- [canteen] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-03-06T13:38:05.080+07:00  INFO 25684 --- [canteen] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-03-06T13:38:07.402+07:00  WARN 25684 --- [canteen] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-06T13:38:07.466+07:00  INFO 25684 --- [canteen] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
-2025-03-06T13:38:07.645+07:00 DEBUG 25684 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : setHierarchy() - The following role hierarchy was set: ROLE_ADMIN > ROLE_STAFF
-2025-03-06T13:38:07.646+07:00 DEBUG 25684 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_ADMIN one can reach role ROLE_STAFF in one step.
-2025-03-06T13:38:07.647+07:00 DEBUG 25684 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_ADMIN one can reach [ROLE_STAFF] in one or more steps.
-2025-03-06T13:38:07.770+07:00 DEBUG 25684 --- [canteen] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
-2025-03-06T13:38:08.041+07:00 DEBUG 25684 --- [canteen] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 57 mappings in 'requestMappingHandlerMapping'
-2025-03-06T13:38:08.134+07:00 DEBUG 25684 --- [canteen] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2025-03-06T13:38:08.325+07:00 DEBUG 25684 --- [canteen] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-03-06T13:38:08.473+07:00  INFO 25684 --- [canteen] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-03-06T13:38:08.520+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:42.582+07:00  INFO 30560 --- [canteen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-08T14:19:48.801+07:00  INFO 30560 --- [canteen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-08T14:19:49.157+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-08T14:19:49.831+07:00  WARN 30560 --- [canteen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08T14:19:49.866+07:00  INFO 30560 --- [canteen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-03-08T14:19:49.932+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : setHierarchy() - The following role hierarchy was set: ROLE_ADMIN > ROLE_STAFF
+2025-03-08T14:19:49.933+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_ADMIN one can reach role ROLE_STAFF in one step.
+2025-03-08T14:19:49.933+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_ADMIN one can reach [ROLE_STAFF] in one or more steps.
+2025-03-08T14:19:49.997+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2025-03-08T14:19:50.142+07:00 DEBUG 30560 --- [canteen] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 57 mappings in 'requestMappingHandlerMapping'
+2025-03-08T14:19:50.215+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-08T14:19:50.298+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-08T14:19:50.426+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-08T14:19:50.473+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.a.accountController:
 	
-2025-03-06T13:38:08.522+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.a.authController:
 	
-2025-03-06T13:38:08.523+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.a.imageController:
 	
-2025-03-06T13:38:08.523+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.actionDetailController:
 	
-2025-03-06T13:38:08.524+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.canteenInfoController:
 	
-2025-03-06T13:38:08.524+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.cartController:
 	
-2025-03-06T13:38:08.525+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.cartItemController:
 	
-2025-03-06T13:38:08.525+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.categoryController:
 	
-2025-03-06T13:38:08.525+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.474+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.foodController:
 	
-2025-03-06T13:38:08.525+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.475+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.foodStaffController:
 	
-2025-03-06T13:38:08.526+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.475+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.orderController:
 	
-2025-03-06T13:38:08.527+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.475+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.c.orderItemController:
 	
-2025-03-06T13:38:08.527+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.475+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	p.c.c.TestController:
 	
-2025-03-06T13:38:08.529+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.476+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	o.s.b.a.w.s.e.BasicErrorController:
 	
-2025-03-06T13:38:08.530+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.477+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	o.s.w.a.OpenApiWebMvcResource:
 	
-2025-03-06T13:38:08.531+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.477+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	o.s.w.u.SwaggerWelcomeWebMvc:
 	
-2025-03-06T13:38:08.532+07:00 DEBUG 25684 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+2025-03-08T14:19:50.478+07:00 DEBUG 30560 --- [canteen] [restartedMain] .WebSocketAnnotationMethodMessageHandler : 
 	o.s.w.u.SwaggerConfigResource:
 	
-2025-03-06T13:38:08.611+07:00 DEBUG 25684 --- [canteen] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-03-06T13:38:08.669+07:00 DEBUG 25684 --- [canteen] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-03-06T13:38:09.155+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
-2025-03-06T13:38:09.155+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
-2025-03-06T13:38:09.156+07:00  INFO 25684 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2025-03-06T13:38:09.156+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]
-2025-03-06T13:38:09.156+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]
-2025-03-06T13:38:09.157+07:00  INFO 25684 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]]
-2025-03-06T13:38:09.158+07:00  INFO 25684 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2025-03-06T13:38:09.158+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:38:09.158+07:00 DEBUG 25684 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:38:09.166+07:00  INFO 25684 --- [canteen] [main] p.canteen.CanteenApplicationTests        : Started CanteenApplicationTests in 20.679 seconds (process running for 22.853)
-2025-03-06T13:38:10.186+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6974a715, started on Thu Mar 06 13:37:49 ICT 2025
-2025-03-06T13:38:10.189+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
-2025-03-06T13:38:10.190+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
-2025-03-06T13:38:10.190+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2025-03-06T13:38:10.190+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]]
-2025-03-06T13:38:10.190+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]
-2025-03-06T13:38:10.190+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1098c1b1]
-2025-03-06T13:38:10.191+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2025-03-06T13:38:10.191+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:38:10.191+07:00 DEBUG 25684 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
-2025-03-06T13:38:10.195+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-03-06T13:38:10.197+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-06T13:38:12.502+07:00  INFO 25684 --- [canteen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-08T14:19:50.533+07:00 DEBUG 30560 --- [canteen] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-08T14:19:50.579+07:00 DEBUG 30560 --- [canteen] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-08T14:19:50.853+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-08T14:19:50.882+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2025-03-08T14:19:50.882+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2025-03-08T14:19:50.883+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-03-08T14:19:50.883+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d82f4a4]
+2025-03-08T14:19:50.883+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d82f4a4]
+2025-03-08T14:19:50.883+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d82f4a4]]
+2025-03-08T14:19:50.885+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-03-08T14:19:50.885+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:19:50.885+07:00 DEBUG 30560 --- [canteen] [restartedMain] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:19:50.902+07:00  INFO 30560 --- [canteen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-08T14:19:50.910+07:00  INFO 30560 --- [canteen] [restartedMain] project.canteen.CanteenApplication       : Started CanteenApplication in 16.271 seconds (process running for 17.092)
+2025-03-08T14:20:09.704+07:00  INFO 30560 --- [canteen] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-08T14:20:09.706+07:00  INFO 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-08T14:20:09.707+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-08T14:20:09.707+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-08T14:20:09.707+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-08T14:20:09.712+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39e30533
+2025-03-08T14:20:09.713+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@770593f5
+2025-03-08T14:20:09.713+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-08T14:20:09.713+07:00  INFO 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-03-08T14:20:09.753+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2025-03-08T14:20:09.772+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.776+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2025-03-08T14:20:09.782+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2025-03-08T14:20:09.790+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.866+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:09.907+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2025-03-08T14:20:09.908+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.908+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2025-03-08T14:20:09.909+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-03-08T14:20:09.910+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.917+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:09.921+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2025-03-08T14:20:09.921+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-03-08T14:20:09.922+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2025-03-08T14:20:09.923+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-03-08T14:20:09.923+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.923+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.923+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.923+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-03-08T14:20:09.926+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-03-08T14:20:09.927+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.933+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2025-03-08T14:20:09.934+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:09.934+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2025-03-08T14:20:09.935+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-03-08T14:20:09.935+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-08T14:20:09.937+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:09.947+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:09.981+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:10.018+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:10.289+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2025-03-08T14:20:10.290+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:10.290+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2025-03-08T14:20:10.291+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2025-03-08T14:20:10.291+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-03-08T14:20:10.323+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2025-03-08T14:20:10.330+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/oauth2-re (truncated)...]
+2025-03-08T14:20:10.343+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:10.432+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2025-03-08T14:20:10.434+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:20:10.435+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2025-03-08T14:20:10.436+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2025-03-08T14:20:10.436+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2025-03-08T14:20:11.207+07:00  INFO 30560 --- [canteen] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 729 ms
+2025-03-08T14:20:11.305+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-03-08T14:20:11.310+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2025-03-08T14:20:11.314+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:20:50.891+07:00  INFO 30560 --- [canteen] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-03-08T14:33:33.034+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/project/auth/signin
+2025-03-08T14:33:33.068+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:33:33.069+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/project/auth/signin
+2025-03-08T14:33:33.071+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/project/auth/signin", parameters={}
+2025-03-08T14:33:33.071+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.auth.authController#signIn(SignInData)
+2025-03-08T14:33:33.090+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.canteen.model.auth.SignInData@32816a6b]
+2025-03-08T14:33:36.011+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-03-08T14:33:36.012+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@545e5fd7]
+2025-03-08T14:33:36.019+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:33:54.365+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/project/auth/food/findAll
+2025-03-08T14:33:54.366+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-08T14:33:54.366+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/project/auth/food/findAll
+2025-03-08T14:33:54.366+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/project/auth/food/findAll", parameters={}
+2025-03-08T14:33:54.366+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodController#findAll()
+2025-03-08T14:33:55.735+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-03-08T14:33:55.735+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@40d3848e]
+2025-03-08T14:33:55.740+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:34:27.896+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/project/food/update
+2025-03-08T14:34:31.367+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/project/food/update
+2025-03-08T14:34:31.368+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/api/v1/project/food/update", parameters={}
+2025-03-08T14:34:31.369+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.canteen.controller.canteen.foodStaffController#updateFood(foodItem)
+2025-03-08T14:34:31.379+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.canteen.entity.canteen.foodItem@27452dc1]
+2025-03-08T14:34:31.382+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public project.canteen.model.auth.ResponMessage project.canteen.controller.canteen.foodStaffController.updateFood(project.canteen.entity.canteen.foodItem); target is of class [project.canteen.controller.canteen.foodStaffController]
+2025-03-08T14:34:31.404+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.s.a.h.RoleHierarchyImpl              : getReachableGrantedAuthorities() - From the roles [ROLE_STAFF] one can reach [ROLE_STAFF] in zero or more steps.
+2025-03-08T14:34:31.405+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public project.canteen.model.auth.ResponMessage project.canteen.controller.canteen.foodStaffController.updateFood(project.canteen.entity.canteen.foodItem); target is of class [project.canteen.controller.canteen.foodStaffController]
+2025-03-08T14:34:33.747+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing MESSAGE destination=/topic/public session=null payload=updateFood
+2025-03-08T14:34:33.756+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-03-08T14:34:33.757+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [project.canteen.model.auth.ResponMessage@6baa2a18]
+2025-03-08T14:34:33.760+07:00 DEBUG 30560 --- [canteen] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-08T14:35:03.020+07:00  INFO 18024 --- [canteen] [main] p.canteen.CanteenApplicationTests        : Starting CanteenApplicationTests using Java 21.0.6 with PID 18024 (started by vuvan in D:\Project\PSA\canteen)
+2025-03-08T14:35:03.024+07:00  INFO 18024 --- [canteen] [main] p.canteen.CanteenApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-03-08T14:35:03.142+07:00 DEBUG 18024 --- [canteen] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6974a715
+2025-03-08T14:35:06.026+07:00  INFO 18024 --- [canteen] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-08T14:35:06.260+07:00  INFO 18024 --- [canteen] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184 ms. Found 11 JPA repository interfaces.
+2025-03-08T14:35:07.698+07:00  INFO 18024 --- [canteen] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-08T14:35:07.844+07:00  INFO 18024 --- [canteen] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-08T14:35:07.921+07:00  INFO 18024 --- [canteen] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-08T14:35:08.984+07:00  INFO 18024 --- [canteen] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-08T14:35:09.073+07:00  INFO 18024 --- [canteen] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-08T14:35:12.542+07:00  INFO 18024 --- [canteen] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68f69ca3
+2025-03-08T14:35:12.549+07:00  INFO 18024 --- [canteen] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-08T14:35:13.281+07:00  INFO 18024 --- [canteen] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-08T14:35:16.633+07:00  INFO 18024 --- [canteen] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-08T14:35:23.707+07:00  INFO 18024 --- [canteen] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-08T14:35:24.790+07:00  INFO 18024 --- [canteen] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-08T14:35:26.470+07:00  WARN 18024 --- [canteen] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08T14:35:26.547+07:00  INFO 18024 --- [canteen] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-03-08T14:35:26.709+07:00 DEBUG 18024 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : setHierarchy() - The following role hierarchy was set: ROLE_ADMIN > ROLE_STAFF
+2025-03-08T14:35:26.710+07:00 DEBUG 18024 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_ADMIN one can reach role ROLE_STAFF in one step.
+2025-03-08T14:35:26.711+07:00 DEBUG 18024 --- [canteen] [main] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_ADMIN one can reach [ROLE_STAFF] in one or more steps.
+2025-03-08T14:35:26.905+07:00 DEBUG 18024 --- [canteen] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2025-03-08T14:35:27.255+07:00 DEBUG 18024 --- [canteen] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 57 mappings in 'requestMappingHandlerMapping'
+2025-03-08T14:35:27.462+07:00 DEBUG 18024 --- [canteen] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-08T14:35:27.749+07:00 DEBUG 18024 --- [canteen] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-08T14:35:27.929+07:00  INFO 18024 --- [canteen] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-08T14:35:27.988+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.a.accountController:
+	
+2025-03-08T14:35:27.990+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.a.authController:
+	
+2025-03-08T14:35:27.992+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.a.imageController:
+	
+2025-03-08T14:35:27.994+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.actionDetailController:
+	
+2025-03-08T14:35:27.995+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.canteenInfoController:
+	
+2025-03-08T14:35:27.995+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.cartController:
+	
+2025-03-08T14:35:27.996+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.cartItemController:
+	
+2025-03-08T14:35:27.996+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.categoryController:
+	
+2025-03-08T14:35:27.997+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.foodController:
+	
+2025-03-08T14:35:27.998+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.foodStaffController:
+	
+2025-03-08T14:35:27.999+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.orderController:
+	
+2025-03-08T14:35:28.000+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.c.orderItemController:
+	
+2025-03-08T14:35:28.001+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	p.c.c.TestController:
+	
+2025-03-08T14:35:28.003+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2025-03-08T14:35:28.004+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.w.a.OpenApiWebMvcResource:
+	
+2025-03-08T14:35:28.008+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	
+2025-03-08T14:35:28.009+07:00 DEBUG 18024 --- [canteen] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.w.u.SwaggerConfigResource:
+	
+2025-03-08T14:35:28.141+07:00 DEBUG 18024 --- [canteen] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-08T14:35:28.348+07:00 DEBUG 18024 --- [canteen] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-08T14:35:29.409+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2025-03-08T14:35:29.412+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2025-03-08T14:35:29.413+07:00  INFO 18024 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-03-08T14:35:29.414+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]
+2025-03-08T14:35:29.415+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]
+2025-03-08T14:35:29.417+07:00  INFO 18024 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]]
+2025-03-08T14:35:29.423+07:00  INFO 18024 --- [canteen] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-03-08T14:35:29.425+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:35:29.426+07:00 DEBUG 18024 --- [canteen] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:35:29.446+07:00  INFO 18024 --- [canteen] [main] p.canteen.CanteenApplicationTests        : Started CanteenApplicationTests in 27.062 seconds (process running for 29.12)
+2025-03-08T14:35:30.743+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6974a715, started on Sat Mar 08 14:35:03 ICT 2025
+2025-03-08T14:35:30.748+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2025-03-08T14:35:30.749+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2025-03-08T14:35:30.749+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-03-08T14:35:30.749+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]]
+2025-03-08T14:35:30.750+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]
+2025-03-08T14:35:30.751+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c902a83]
+2025-03-08T14:35:30.751+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-03-08T14:35:30.751+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:35:30.752+07:00 DEBUG 18024 --- [canteen] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-03-08T14:35:30.767+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-08T14:35:30.772+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-08T14:35:33.941+07:00  INFO 18024 --- [canteen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

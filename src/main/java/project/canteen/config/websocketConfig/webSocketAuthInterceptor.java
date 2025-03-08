@@ -20,22 +20,18 @@ public class webSocketAuthInterceptor implements HandshakeInterceptor {
     @Override
     public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response,
                                    WebSocketHandler wsHandler, Map<String, Object> attributes) {
-//        System.out.println("🔍 Interceptor - beforeHandshake() triggered");
         if (request instanceof ServletServerHttpRequest servletRequest) {
             HttpServletRequest httpRequest = servletRequest.getServletRequest();
             String token = httpRequest.getParameter("token");
-//            String token = httpRequest.getHeader("Authorization");
-//            System.out.println(token);
-            // Lấy token từ URL query
 
             if (token != null && jwtUtil.validateToken(token)) {
                 String username = jwtUtil.getLoginFormToke(token);
-//                System.out.println(username);
-                attributes.put("username", username); // Lưu username vào session
-                return true;
+                attributes.put("username", username);
+                return true;// Lưu username vào session
+
             }
         }
-        return false; // Từ chối kết nối nếu không có JWT hợp lệ
+        return false; //
     }
 
     @Override

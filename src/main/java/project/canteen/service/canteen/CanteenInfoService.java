@@ -20,7 +20,7 @@ public class CanteenInfoService {
             } else {
                 canteenInfo current =  canteenInfoRepositry.findAll().getFirst();
                 current.setName(canteenInfo.getName());
-                current.setAdress(current.getAdress());
+                current.setAdress(canteenInfo.getAdress());
                 current.setDescription(canteenInfo.getDescription());
                 current.setEmail(canteenInfo.getEmail());
                 current.setPhone(canteenInfo.getPhone());
