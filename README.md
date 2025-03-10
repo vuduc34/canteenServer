@@ -1,6 +1,7 @@
 Hướng dẫn cài đặt server: 
--Cài đặt java JDK 21: https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html , bản Windows x64 Installer
--cài đặt Intellij: để mở project
+
+- Cài đặt java JDK 21: https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html , bản Windows x64 Installer
+- cài đặt Intellij: để mở project
 - clone project từ github về
 - mở Intellij, chọn File -> Open và chọn thư mục project
 - cài đặt JDK để chạy project: chọn File -> Setting -> Build,Excution, Deployment -> Build Tools -> Maven -> Importing: tại mục JDK for Importer: chọn JDK 21
@@ -15,3 +16,6 @@ Hướng dẫn cài đặt server:
     (chỉ thay đổi 3 dòng này)
 - sau khi thay dổi chạy lại project là được, vào http://localhost:8080/swagger-ui/index.html nếu có hiển thị giao diện các API là thành công, tài khoản mặc định
   sau khi chạy là admin/admin.
+
+  ![image](https://github.com/user-attachments/assets/c2c92586-fa3e-4e91-a519-076c3318f22b)
+
