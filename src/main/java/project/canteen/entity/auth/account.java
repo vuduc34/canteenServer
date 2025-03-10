@@ -38,7 +38,7 @@ public class account {
     private String phoneNumber;
 
     @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(name = "account_role", joinColumns = {
             @JoinColumn(name = "account_id", referencedColumnName = "id", nullable = false) }, inverseJoinColumns = {
             @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false) })
